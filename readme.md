@@ -32,17 +32,3 @@ Templating: Handlebars
 Backend: Node.js with Express
 
 
-project-root/
-│
-├── views/
-│   ├── layouts/
-│   │   └── layout.hbs
-│   ├── dashboard.hbs
-│   ├── query-monitor.hbs
-│   └── other-pages.hbs
-│
-├── public/
-│   ├── styles.css
-│   └── script.js
-│
-└── server.js
