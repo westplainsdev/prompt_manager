@@ -1,11 +1,11 @@
 # Prompt Management 
 
 
-This project is a comprehensive management interface for Prompt Management application.  
+This project is a comprehensive management interface for a Prompt Management application.  
 
 Structure:
 
-It's a web application using Handlebars as the templating engine.
+It's a web application that uses handlebars as the templating engine.
 The project follows a layout-based structure with partial components.
 
 
@@ -30,5 +30,3 @@ Technology Stack:
 Frontend: HTML, CSS (Bootstrap), JavaScript
 Templating: Handlebars
 Backend: Node.js with Express
-
-
