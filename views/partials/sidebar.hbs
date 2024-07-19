@@ -1,0 +1,40 @@
+<nav id="sidebar" class="sidebar">
+  <div class="position-sticky">
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link {{#if active.dashboard}}active{{/if}}" href="/"> Dashboard </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link {{#if active.queryMonitor}}active{{/if}}" href="/query-monitor">Query Monitor</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link {{#if active.hostMetrics}}active{{/if}}" href="/host-metrics">Host Metrics</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link {{#if active.clusterMetrics}}active{{/if}}" href="/cluster-metrics">Cluster Metrics</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link {{#if active.history}}active{{/if}}" href="/history">History</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link d-flex justify-content-between align-items-center {{#if active.system}}active{{/if}}"
+           href="#" data-bs-toggle="collapse" data-bs-target="#systemSubmenu"
+           aria-expanded="false" aria-controls="systemSubmenu" id="systemLink">
+          System
+          <i class="bi bi-chevron-down"></i>
+        </a>
+        <ul class="collapse nav flex-column ms-3 submenu" id="systemSubmenu">
+          <li class="nav-item">
+            <a class="nav-link" href="/segment-status">Segment Status</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/storage-status">Storage Status</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link {{#if active.admin}}active{{/if}}" href="/admin">Admin</a>
+      </li>
+    </ul>
+  </div>
+</nav>

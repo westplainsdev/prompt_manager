@@ -1,0 +1,45 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h1 class="h2">Query Monitor</h1>
+  <button class="btn btn-primary">New Action</button>
+</div>
+
+<div class="row mt-4">
+  <div class="col-md-4 mb-4">
+    <canvas id="barChart" width="400" height="200"></canvas>
+  </div>
+</div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    fetch('/data')
+      .then(response => response.json())
+      .then(data => {
+        const ctx = document.getElementById('barChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: data.labels,
+            datasets: [{
+              label: 'Sales',
+              data: data.datasets[0].data,
+              backgroundColor: data.datasets[0].backgroundColor,
+              borderColor: data.datasets[0].borderColor,
+              borderWidth: data.datasets[0].borderWidth
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            },
+            options: {
+              responsive: true,
+              maintainAspectRatio: false, // Set to false to allow resizing
+            }
+          }
+        });
+      });
+  });
+</script>

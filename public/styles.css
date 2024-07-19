@@ -1,0 +1,162 @@
+body {
+    overflow-x: hidden;
+    padding-top: 56px;
+    background-color: #f8f9fa; /* Light gray background */
+  }
+  .sidebar {
+    background-color: #1e2a3a; /* Dark blue */
+    color: white;
+    height: calc(100vh - 56px);
+    position: fixed;
+    top: 56px;
+    left: 0;
+    transition: all 0.3s;
+    width: 250px;
+    z-index: 1000;
+  }
+  .sidebar.collapsed {
+    left: -250px;
+  }
+  
+  .navbar {
+    background-color: #1e2a3a; /* Dark blue */
+  }
+  .content {
+    transition: all 0.3s;
+    margin-left: 250px;
+  }
+  .content.expanded {
+    margin-left: 0;
+  }
+  .nav-link {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .nav-link:hover,
+  .nav-link.active {
+    color: #ff8c00; /* Orange */
+  }
+  #sidebarToggle {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+    padding-left: 1rem;
+  }
+  
+  .navbar .d-flex {
+    flex-grow: 1;
+  }
+  
+  .navbar-brand {
+    margin-right: 0;
+  }
+  
+  @media (max-width: 991.98px) {
+    .navbar .d-flex {
+      flex-grow: 0;
+    }
+  }
+  
+  .navbar-brand,
+  .navbar-nav .nav-link {
+    color: white !important;
+  }
+  .navbar-nav .nav-link:hover {
+    color: #ff8c00 !important; /* Orange */
+  }
+  .dropdown-menu {
+    background-color: #1e2a3a; /* Dark blue */
+  }
+  .dropdown-item {
+    color: white;
+  }
+  .dropdown-item:hover {
+    background-color: #ff8c00; /* Orange */
+    color: #1e2a3a; /* Dark blue */
+  }
+  .btn-primary {
+    background-color: #ff8c00; /* Orange */
+    border-color: #ff8c00; /* Orange */
+  }
+  .btn-primary:hover {
+    background-color: #e67e00; /* Darker orange */
+    border-color: #e67e00; /* Darker orange */
+  }
+  .card-header-color {
+    background-color: #1e2a3a;
+    color: white;
+  }
+  .card-header-inverse-color {
+    color: #1e2a3a;
+  }
+  
+  #systemLink.nav-link[aria-expanded='false'] {
+    color: rgba(255, 255, 255, 0.7) !important;
+  }
+  
+  #systemLink.nav-link[aria-expanded='true'] {
+    color: #ff8c00 !important; /* Orange */
+  }
+  
+  /* Ensure submenu items are always vertical */
+  .sidebar .submenu {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+  }
+  
+  .sidebar .submenu .nav-item {
+    width: 100%;
+  }
+  
+  .sidebar .submenu .nav-link {
+    padding-left: 1rem;
+    position: relative;
+  }
+  
+  /* Add a visual indicator for submenu items */
+  .sidebar .submenu .nav-link::before {
+    content: none;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 5px;
+    background-color: currentColor;
+    border-radius: 50%;
+  }
+  
+  /* Adjust the collapse transition */
+  .sidebar .collapse {
+    transition: all 0.2s ease;
+  }
+  
+  .sidebar .collapse:not(.show) {
+    display: none;
+  }
+  
+  .sidebar .collapsing {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.2s ease;
+  }
+  
+  /* Breadcrumb styles */
+  .breadcrumb {
+    background-color: transparent;
+    padding: 0.75rem 0;
+    margin-bottom: 0;
+  }
+  
+  .breadcrumb-item + .breadcrumb-item::before {
+    content: '/';
+  }
+  
+  .breadcrumb-item a {
+    color: #1e2a3a;
+    text-decoration: none;
+  }
+  
+  .breadcrumb-item.active {
+    color: #6c757d;
+  }
+  
