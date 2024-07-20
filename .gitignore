@@ -1,1 +1,6 @@
+*.tsbuildinfo
+.*
+Thumbs.db
+coverage
 node_modules
+npm-debug.log*
