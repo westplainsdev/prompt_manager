@@ -1,0 +1,31 @@
+{
+  "name": "prompt-manager-client",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "webpack --config webpack.config.cjs --mode production",
+    "clean": "rimraf dist",
+    "watch": "webpack --config webpack.config.cjs --mode production -w",
+    "test": "vitest --run"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.4.6",
+    "@testing-library/react": "^16.0.0",
+    "@testing-library/user-event": "^14.5.2",
+    "html-webpack-plugin": "^5.6.0",
+    "jsdom": "^24.1.0",
+    "rimraf": "^6.0.1",
+    "source-map-loader": "^5.0.0",
+    "terser-webpack-plugin": "^5.3.10",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.5.3",
+    "vitest": "^2.0.3",
+    "webpack": "^5.93.0",
+    "webpack-bundle-analyzer": "^4.10.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
+  }
+}

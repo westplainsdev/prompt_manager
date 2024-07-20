@@ -30,3 +30,33 @@ Technology Stack:
 Frontend: HTML, CSS (Bootstrap), JavaScript
 Templating: Handlebars
 Backend: Node.js with Express
+
+
+## Development
+
+### Install
+```bash
+npm ci
+```
+
+### Build
+
+```bash
+npm run build
+```
+
+### Run (dev mode)
+```bash
+npm run dev
+```
+
+### Run (production mode)
+```bash
+npm start -w server
+```
+
+
+### Test
+```bash
+npm run test -ws #or indivdually for -w server or -w client
+```
